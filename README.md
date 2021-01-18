@@ -1,10 +1,18 @@
-# Desktop-Notifier
+# Article-Reminder
 
-A Python Script to Create Desktop Notification of Various Linux Commands.
+A Python Script to Create Desktop Notification of Articles which are listed inside the spreadsheet.
 
-The script fetches the Linux Command and it's link from the Excel file and then pushes a desktop notification with the Title and the Link and using the link, you can learn about the Linux Command. 
+The script fetches the Article and it's link from the Excel file and then pushes a desktop notification with the Title and the Link and using the link, you read the particular Article. 
 
-The Script delets the row once the notification is sent and then saves the workbook after deleting the row. 
+The Script also deletes the row once the notification is sent and then saves the workbook after deleting the row to ensure that the same link doesn't appear twice. 
+
+# Use-Case
+
+You can add all the articles which you would like to read later into the spreadsheet and this script will pop up the notification with the Title and Link of the Article and you can directly read it by clicking on the notification. 
+
+After configuring the spreadsheet, schedule the python script either with crontabs [For Linux/MacOS] or using Task Scheduler [For Windows]. 
+
+You are free to be creative and tinker with the code to help you remind various other tasks with the help of Desktop Notifications. 
 
 # Screenshots
 
@@ -18,4 +26,7 @@ TIP: You can add this to the cron tab and then make the python script push a not
     
     Desktop Notifications with notify2 module
     Spreadsheet handling with openpyxl module
-    crontabs [If you want to schedule the scripts at a regular interval]
+    crontabs [If you want to schedule the scripts at a regular interval] for Linux and MacOS
+    Task Scheduler [If you want to schedule the scripts at a regular interval] for Windows
+    
+NOTE: I would highly appreciate having the Article Title and It's link in a separate Spreadsheet/Txt file as a back-up or for future reference because the script will delete the Title and the Link once it pushes the notification. 
